@@ -1,0 +1,23 @@
+python3.9 autogrow3_IP6.py \
+     -filename_of_receptor mol/hex.pdb \
+     -center_x 0.61648205 -center_y -0.57495385 -center_z -12.31265128\
+     -size_x 25.00 -size_y 24.00 -size_z 16 \
+     -additional_autoclickchem_parameters "" \
+     -allow_modification_without_frag_addition FALSE \
+     -directory_of_source_compounds mol/starting_compounds_IP5/  \
+     -directory_of_fragments  fragments/lib/ \
+     -number_of_mutants_first_generation 100000 \
+     -number_of_crossovers_first_generation 0 \
+     -number_of_mutants 100000 \
+     -number_of_crossovers 0 \
+     -top_ones_to_advance_to_next_generation 10 \
+     -num_generations 2 \
+     -max_seconds_per_generation 10000000 \
+     -use_lipinski_filter TRUE -use_strict_lipinski_filter TRUE -use_ghose_filter TRUE \
+     -scoring_function VINA -score_by_ligand_efficiency FALSE \
+     -maintain_core TRUE -minimum_core_atoms_required 37 \
+     -vina_executable qvina2.1 \
+     -openbabel_bin_directory /usr/bin/ \
+     -mgltools_directory /opt/mgltools/ \
+     -num_processors -1 \
+     -output_dir ./output/

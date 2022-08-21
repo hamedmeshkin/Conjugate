@@ -1,0 +1,23 @@
+python3.9 autogrow3_BVM.py \
+     -filename_of_receptor mol/hex.pdb \
+     -center_x 1.03 -center_y -0.75 -center_z -3.05\
+     -size_x 30.25 -size_y 28.83 -size_z 34.13 \
+     -additional_autoclickchem_parameters "" \
+     -allow_modification_without_frag_addition FALSE \
+     -directory_of_source_compounds mol/starting_compounds_BVM/  \
+     -directory_of_fragments  fragments/MW_300/ \
+     -number_of_mutants_first_generation 3801 \
+     -number_of_crossovers_first_generation 0 \
+     -number_of_mutants 3801 \
+     -number_of_crossovers 0 \
+     -top_ones_to_advance_to_next_generation 10 \
+     -num_generations 2 \
+     -max_seconds_per_generation 10000000 \
+     -use_lipinski_filter TRUE -use_strict_lipinski_filter TRUE -use_ghose_filter TRUE \
+     -scoring_function VINA -score_by_ligand_efficiency FALSE \
+     -maintain_core TRUE -minimum_core_atoms_required 100 \
+     -vina_executable vina \
+     -openbabel_bin_directory /usr/bin/ \
+     -mgltools_directory /opt/mgltools/ \
+     -num_processors -1 \
+     -output_dir ./outputBVM/
